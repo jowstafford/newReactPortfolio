@@ -1,3 +1,5 @@
+@import "../../Global.scss";
+
 .center {
     display: flex;
     align-items: center;
@@ -8,7 +10,8 @@
         height: 80vh;
         width: 10vh;
         position: fixed;
-        background-color: crimson;
+        background-color: $CT1;
+        border: 2px solid $CC1;
         border-radius: 10px;
     }
 }

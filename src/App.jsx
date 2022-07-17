@@ -1,5 +1,6 @@
 import "./App.scss";
 // import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import { useState } from "react";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Contact from "./components/Contact/Contact";
 import Homepage from "./components/Homepage/Homepage";
@@ -7,9 +8,27 @@ import References from "./components/References/References";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Works from "./components/Works/Works";
 
-function App() {
+// function goldDust() {
+//   document.body.style.backgroundColor="#f22222";
+// }
+
+export default function App() {
+  // // const [isActive, setIsActive] = useState(false);
+  // // const handleClick = () => {
+  // //   setIsActive((current) => !current);
+  // };
   return (
     <div className="App">
+      {/* <input type="button" className="btn" value="Gold Dust" onclick={goldDust()}></input> */}
+      {/* <button
+        style={{
+          backgroundColor: isActive ? "#f22222" : "",
+          color: isActive ? "#ffffff" : "",
+        }}
+        onclick={handleClick}
+      >
+        Gold Dust
+      </button> */}
       <div className="container">
         <div className="bubbles">
           <span className="A"></span>
@@ -63,5 +82,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
