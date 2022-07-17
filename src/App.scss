@@ -1,8 +1,89 @@
 * {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 
-// .App {
+.App {
+  min-height: 100vh;
+  background-color: #0c192c;
 
-// }
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    .bubbles {
+      position: relative;
+      display: flex;
+    }
+
+    .bubbles span {
+      position: relative;
+      width: 30px;
+      height: 30px;
+      background: #4fc3dc;
+      margin: 0 4px;
+      border-radius: 50%;
+      box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
+      animation: animate 15s linear infinite;
+      animation-duration: calc(125s / var(--i));
+    }
+
+    .bubbles span:nth-child(even) {
+      background: #ff2d75;
+      box-shadow: 0 0 0 10px #ff2d7544, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
+    }
+
+    .A {--i: 11;}
+    .B {--i: 12;}
+    .C {--i: 24;}
+    .D {--i: 10;}
+    .E {--i: 14;}
+    .F {--i: 23;}
+    .G {--i: 18;}
+    .H {--i: 16;}
+    .I {--i: 19;}
+    .J {--i: 20;}
+    .K {--i: 22;}
+    .L {--i: 25;}
+    .M {--i: 18;}
+    .N {--i: 21;}
+    .O {--i: 15;}
+    .P {--i: 13;}
+    .Q {--i: 26;}
+    .R {--i: 17;}
+    .S {--i: 13;}
+    .T {--i: 28;}
+    .U {--i: 11;}
+    .V {--i: 12;}
+    .W {--i: 24;}
+    .X {--i: 10;}
+    .Y {--i: 14;}
+    .Z {--i: 23;}
+    .AA {--i: 18;}
+    .AB {--i: 16;}
+    .AC {--i: 19;}
+    .AD {--i: 20;}
+    .AE {--i: 22;}
+    .AF {--i: 25;}
+    .AG {--i: 18;}
+    .AH {--i: 21;}
+    .AI {--i: 15;}
+    .AJ {--i: 13;}
+    .AK {--i: 26;}
+    .AL {--i: 17;}
+    .AM {--i: 13;}
+    .AN {--i: 28;}
+
+    @keyframes animate {
+      0% {
+        transform: translateY(100vh) scale(0);
+      }
+      100% {
+        transform: translateY(-10vh) scale(1);
+      }
+    }
+  }
+}
