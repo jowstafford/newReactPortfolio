@@ -1,59 +1,58 @@
 import "./Sidebar.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHouse,
-  faUserTie,
-  faBriefcase,
-  faUsersGear,
-  faPhone,
-} from "@fortawesome/free-solid-svg-icons";
+import * as freeSolidSvgIcons from "@fortawesome/free-solid-svg-icons";
 
-export default function Sidebar() {
+export default function Sidebar({ menuOpen, setMenuOpen }) {
   return (
-    <div class="center">
-      <div class="sidebar">
+    <div className="center">
+      <div className={"sidebar " + (menuOpen && "active")}>
         <ul>
           <li>
             <a href="#homepage">
-              <span class="icon">
-                <FontAwesomeIcon icon={faHouse} className="fontIcon" />
+              <span className="icon">
+                <FontAwesomeIcon icon={freeSolidSvgIcons.faHouse} className="fontIcon" />
               </span>
-              <span class="title">Home</span>
+              <span className="title">Home</span>
             </a>
           </li>
           <li>
             <a href="#aboutMe">
-              <span class="icon">
-                <FontAwesomeIcon icon={faUserTie} className="fontIcon" />
+              <span className="icon">
+                <FontAwesomeIcon icon={freeSolidSvgIcons.faUserTie} className="fontIcon" />
               </span>
-              <span class="title">About Me</span>
+              <span className="title">About</span>
             </a>
           </li>
           <li>
             <a href="#works">
-              <span class="icon">
-                <FontAwesomeIcon icon={faBriefcase} className="fontIcon" />
+              <span className="icon">
+                <FontAwesomeIcon icon={freeSolidSvgIcons.faBriefcase} className="fontIcon" />
               </span>
-              <span class="title">Works</span>
+              <span className="title">Works</span>
             </a>
           </li>
           <li>
             <a href="#ref">
-              <span class="icon">
-                <FontAwesomeIcon icon={faUsersGear} className="fontIcon" />
+              <span className="icon">
+                <FontAwesomeIcon icon={freeSolidSvgIcons.faUsersGear} className="fontIcon" />
               </span>
-              <span class="title">References</span>
+              <span className="title">References</span>
             </a>
           </li>
           <li>
             <a href="#contact">
-              <span class="icon">
-                <FontAwesomeIcon icon={faPhone} className="fontIcon" />
+              <span className="icon">
+                <FontAwesomeIcon icon={freeSolidSvgIcons.faPhone} className="fontIcon" />
               </span>
-              <span class="title">Contact</span>
+              <span className="title">Contact</span>
             </a>
           </li>
         </ul>
+        <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+          <span className="line1"></span>
+          <span className="line2"></span>
+          <span className="line3"></span>
+        </div>
       </div>
     </div>
   );

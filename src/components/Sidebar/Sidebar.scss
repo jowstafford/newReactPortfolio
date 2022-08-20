@@ -1,17 +1,124 @@
 @import "../../Global.scss";
 
 .center {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    .sidebar {
-        top: 10%;
-        left: 20px;
-        height: 80vh;
-        width: 10vh;
-        position: fixed;
-        background-color: $CT1;
-        border: 2px solid $CC1;
-        border-radius: 10px;
+  .sidebar {
+    top: 20%;
+    left: 20px;
+    height: 60vh;
+    width: 80px;
+    position: fixed;
+    background-color: $CT1;
+    border: 2px solid $CC1;
+    box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 10px;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      li {
+        list-style: none;
+        margin-bottom: 30%;
+
+        a {
+
+          .fontIcon {
+            color: $CT4;
+            width: 6vh;
+            height: 4vh;
+            padding: 5px;
+          }
+
+          .fontIcon:hover {
+            background-color: $CT3;
+            border-radius: 10px;
+          }
+
+          .title {
+            display: none;
+          }
+        }
+      }
     }
+
+    .hamburger {
+      width: 32px;
+      height: 25px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+
+      span {
+        width: 100%;
+        height: 3px;
+        background-color: $CT4;
+        transform-origin: left;
+        transition: all 1s ease;
+      }
+    }
+
+    &.active {
+      background-color: $CT1;
+      color: $CT1;
+      width: 250px;
+
+      ul {
+        display: flex;
+        align-items: flex-start;
+        
+        li {
+            margin-bottom: 8%;
+          a {
+            display: flex;
+            text-decoration: none;
+            align-items: center;
+            width: 27vh;
+
+            .fontIcon:hover {
+              background-color: rgb(82, 121, 111, 0);
+            }
+
+            .title {
+              display: block;
+              margin-left: 10%;
+              color: $CT4;
+              font-size: 24px;
+            }
+          }
+
+          a:hover {
+            background-color: $CT3;
+            border-radius: 10px;
+          }
+        }
+      }
+
+      .hamburger {
+        span {
+          &:first-child {
+            background-color: $CT4;
+            transform: rotate(45deg);
+          }
+          &:nth-child(2) {
+            opacity: 0;
+          }
+          &:last-child {
+            background-color: $CT4;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
 }
