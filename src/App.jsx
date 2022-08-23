@@ -55,12 +55,12 @@ export default function App() {
           <span className="AN"></span>
         </div>
       </div>
-      <Sidebar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-      <Homepage />
-      <AboutMe />
-      <Works />
-      <References />
-      <Contact />
+        <Sidebar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <Homepage />
+        <AboutMe />
+        <Works />
+        <References />
+        <Contact />
     </div>
   );
 }
