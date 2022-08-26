@@ -9,7 +9,7 @@ export default function Homepage() {
           <img src="assets/ProfessionalPortrait.jpg" alt="" />
           <h2>Jordan Stafford</h2>
           <span>Full-Stack Developer</span>
-          <a href="#">Hire Me</a>
+          <a href="#HireMe">Hire Me</a>
         </div>
       </div>
       <h1>

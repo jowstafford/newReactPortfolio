@@ -13,11 +13,12 @@ export default function AboutMe() {
             </svg>
             <div class="number">
               <h2>
-                85<span>%</span>
+                480<span>+</span>
               </h2>
-              <p>Html</p>
+              <p>Hours</p>
             </div>
           </div>
+          <h5>Fill this out</h5>
         </div>
         <div class="card">
           <div class="percent">
@@ -28,11 +29,12 @@ export default function AboutMe() {
             </svg>
             <div class="number">
               <h2>
-                85<span>%</span>
+                25
               </h2>
-              <p>Html</p>
+              <p>CEUs</p>
             </div>
           </div>
+          <h5>Fill this out</h5>
         </div>
         <div class="card">
           <div class="percent">
@@ -43,12 +45,16 @@ export default function AboutMe() {
             </svg>
             <div class="number">
               <h2>
-                85<span>%</span>
+                58
               </h2>
-              <p>Html</p>
+              <p>Credits</p>
             </div>
           </div>
+          <h5>Fill this out</h5>
         </div>
+      </div>
+      <div class="article">
+      <h5>Fill this out</h5>
       </div>
     </div>
   );
